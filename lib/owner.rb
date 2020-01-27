@@ -62,8 +62,13 @@ class Owner
   end
    
   def sell_pets
-    
-  end
+    all_pets = []
+    all_pets = cats + dogs
+    all_pets.each do |p|
+      p.owner = nil
+      p.mood = "nervous"
+    end 
+   end
      
 
 
